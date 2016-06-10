@@ -13,9 +13,10 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-        
+
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/gisinc.css" id="theme">
+        <link rel="stylesheet" href="css/code-block.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,23 +37,29 @@
 
 	<body>
 
-		<div class="reveal">
+		<section class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+			<section class="slides">
+				<section>Slide 1</section>
 				<section>
-      	            GISi
+					<h3>You can add some code samples...</h3>
+					<pre class="code">
+						<code class="stretch javascript code"
+							  data-code="./code-samples/test_code.js"
+							  data-trim
+							  style="max-height:400px;">
+						</code>
+					</pre>
 				</section>
-				<section>
-      	            <a href="http://gisinc.com">Check out our website</a>
-			    </section>
-		    </div>
+		    </section>
 
+		<div>
             <div class="top-bar"> &nbsp;	</div>
             <a class="logo" href="http://gisinc.com/" title="Geographic Information Services, Inc."> &nbsp; </a>
 
 		</div>
-
+		</section>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -70,6 +77,7 @@
 
 				// Optional reveal.js plugins
 				dependencies: [
+                    { src: './plugin/externalcode/externalcode.js', condition: function() { return !!document.querySelector( '[data-code]' ); } },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
